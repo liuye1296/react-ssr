@@ -1,5 +1,5 @@
 # react-ssr
-    一个使用react router redux    node  做的同构项目
+    一个使用react react-router redux    node  做的同构项目
 # 什么是ssr
     ssr就是服务器渲染 ssr的主要作用就是解决首页白屏问题和利于seo 一个网站需要seo的时候 并且还要做成spa项目 那么ssr是必须的 
     注意的是 只有第一次 访问的时候 会服务器渲染 其他时候都是走 JS路由的  这样既能seo 也能节省服务器性能
