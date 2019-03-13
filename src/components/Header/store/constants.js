@@ -1,0 +1,1 @@
+export const HEADER_LOGIN = 'HEADER/HEADER_LOGIN'

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="referrer" content="no-referrer" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    name="viewport">
+  <meta name="Keywords" content="{{keywords}}">
+  <meta name="Description" content="{{description}}">
+  <!-- csp安全策略 最好使用Response Headers来指定 图片可以来源任何地方  JS只能同域加载 不能执行任何内链JS 并且信任腾讯的域名   -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://*.qq.com; frame-src https://*.qq.com;  style-src 'self' https://*.qq.com "> -->
+  <title>{{title}}</title>
+  <style>
+   {{css}}
+  </style>
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+</head>
+
+<body>
+  <div id="root">{{content}}</div>
+  <script>
+    window.__INIT_STATE__ = {
+      state: {{state}}
+    }   
+  </script>
+</body>
+
+</html>
