@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Fragment,Component } from 'react'
 import { connect } from 'react-redux'
+import Helmet from 'react-helmet'
 import { getHomeListAction, updateData } from './store/actions'
 import combinationCss from '../../currency/combinationCss'
 import styles from '../../css/home/style.styl'
 import shali from '../../assets/shali.jpg'
+
 class Home extends Component {
 	getList() {
 		const { homeList } = this.props
@@ -11,7 +13,12 @@ class Home extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<Fragment>
+				<Helmet>
+					<title>百度一下，你就知道</title>
+					<meta name="Keywords" content="超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。"/>
+  					<meta name="Description" content="全球最大的中文搜索引擎、致力于让网民更便捷地获取信息，找到所求。"/>
+				</Helmet>
 				<div className={styles.text}>my name is {this.props.name}</div>
 				<div onClick={() => {
 					this.updateData()
@@ -19,7 +26,7 @@ class Home extends Component {
 				<div className={styles.toux}></div>
 				<img src={shali} />
 				{this.getList()}
-			</div >
+			</Fragment >
 		)
 	}
 	componentDidMount() { // 装载完成 服务器并不会执行

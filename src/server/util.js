@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config' //可以解析 拆分 子路由
 import { renderToString } from 'react-dom/server'
+import Helmet from 'react-helmet'
 import { Provider } from 'react-redux'
 import { indexHtml } from '../config'
 import fs from 'fs' //路由文件
@@ -16,12 +17,15 @@ export const render = (store, path, routes, context) => {
             </StaticRouter>
         </Provider>
     ));
+    const helmet = Helmet.renderStatic()
     const css = context.css.join(' ') || ''
     const code = getTemplateCode(fs, indexHtml)//获取模板文件
     const data = {
         css,
+        content,
         state: JSON.stringify(store.getState()),
-        content
+        title:helmet.title.toString(),
+        meta:helmet.meta.toString()
     }
     return templateFunc(code, data)
 }
