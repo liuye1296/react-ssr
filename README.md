@@ -20,7 +20,7 @@
         service  业务代码  主要是 这里调用http请求数据 然后再做一些业务处理 提供给view调用  
         store 合并store代码 每个view components都有自己的store，store里面的文件就是合并这些 暴露出去  
         view 页面代码 就是路由引用的  
-        App.js  打算客户端和服务器公共入口 可以引入一些全局样式或者插件什么的 暂时没用用到  
+        App.js  打算做客户端和服务器公共入口 可以引入一些全局样式或者插件什么的 但暂时没用用到  
 # ssr执行流程
     详情可以查看src/server/index.js代码里面的注释
     1.http 监听3000接口  
