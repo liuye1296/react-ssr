@@ -41,7 +41,7 @@ http.createServer((request, response) => {
         response.writeHead(200, { 'Content-Type': 'text/html' });
         const htmlStr = render(store, request.url, routes, context)
         if (context.action === 'REPLACE') { // 当触发 Redirect 之后  会添加了 action 重新登录  重定向
-            response.redirect(301, '/login');
+            response.redirect(302, '/login');
             response.end();
         }
         if (context.statusCode === '404') {
