@@ -30,7 +30,7 @@
     5.把store传递 并执行renderToString 得到渲染的html  (util 里面 读取模板渲染)
     6.响应请求
 # 运行项目
-   1.git clone  https://github.com/liuye1296/react-ssr.git
+   1.git clone  https://github.com/liuye1296/react-ssr.git  
    2.yarn  
    3. 开发环境执行 yarn dev （注意这个项目没有实现静态服务  本人是用nginx代理public目录做的静态服务，为什么？ 因为正常情况下 生产环境静态资源通常都是存放在cdn的，就算不使用cdn 静态文件也不要跟项目存放在一个域名之下(cookie隔离，防止请求静态文件时附带cookie造成浪费)  访问127.0.0.1:3000
    4. yarn build  打包
