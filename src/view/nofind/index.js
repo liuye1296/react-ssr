@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 class NoFind extends Component {
-    componentWillMount() {
-        if (this.props.staticContext) {
-            this.props.staticContext.statusCode = '404'
+    constructor(props) {
+        super(props)
+        if (props.staticContext) {
+            props.staticContext.statusCode = '404'
         }
     }
     render() {
