@@ -12,6 +12,10 @@
     "build:client": "webpack --config build/webpack.client.js --mode production",
     "build": "npm-run-all --parallel build:**"
   },
+  "sideEffects": [
+    "*.css",
+    "*.styl"
+  ],
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
