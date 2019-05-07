@@ -10,8 +10,8 @@ const clientConfig = {
     mode: 'development',// production or development 一般是 控制台输入的 比如 webpack --mode=production 通常是不需要写的
     output: {
         path: path.resolve(__dirname, '../public'), //输出路径
-        filename: "index.js",
-        publicPath:'http://127.0.0.1/public/'//输入文件的绝对路径 配合 生产环境 CDN  之类  通常静态文件都是放置CDN的
+        filename: "[name]_[hash:6].js",
+        publicPath: 'http://127.0.0.1/public/'//输入文件的绝对路径 配合 生产环境 CDN  之类  通常静态文件都是放置CDN的
     },
     optimization: {//分割文件配置
         splitChunks: {
@@ -60,9 +60,9 @@ const clientConfig = {
         }),
         new HtmlWebpackPlugin({
             template: './static/index.server.html', // 添加模版文件
-            filename:'index.server.html',
-            favicon:'./static/favicon.ico',
-            showErrors:false
+            filename: 'index.server.html',
+            favicon: './static/favicon.ico',
+            showErrors: false
         })
     ]
 
